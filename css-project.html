@@ -6,7 +6,7 @@
   <title>superhero</title>
   <style>
  body  {
-  background-image: radial-gradient(white, white, blue);
+  background-image: radial-gradient(white, white, blue);/*the colors for the whole page*/
 
  
 }
@@ -14,7 +14,7 @@
  
   background-image: url(blue.png);
   background-position: right bottom, left top;
-  background-repeat: no-repeat, repeat;
+  background-repeat: no-repeat, repeat;/*The background image will overlap*/
 }
 header{
     color: white;
@@ -37,7 +37,7 @@ header{
   height: 300px;
   position: relative;
  
-  animation-duration: 4s;
+  animation-duration: 4s;/*animation lasts only 4 seconds*/
 }
 
 #superhero1:hover{
@@ -66,7 +66,7 @@ header{
   position: relative;
      width: 350px;
   height: 320px;
-  transform: rotatey(120deg);
+  transform: rotatey(120deg);/*image flips only when the cursor is over it*/
 }
 
 
@@ -77,7 +77,22 @@ header{
   div {
   background-image: linear-gradient(white,white\, blue);
 }
+div {
   
+  position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: 1; /*the amount of times the page will animate*/
+}
+
+
+
+/* Standard syntax */
+@keyframes example {
+  0%   {background-color:blue; left:0px; top:0px;}
+  50%  {background-color:white; left:200px; top:0px;}
+  100% {background-color:blue; left:0px; top:0px;}
+}/*color changes when it reaches a certain location*/
   </style>
 </head>
 <body>
